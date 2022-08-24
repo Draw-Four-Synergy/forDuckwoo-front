@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Account from "./components/Account";
 import MainCategory from "./components/MainCategory";
 import InfoBoard from "./components/InfoBoard";
+import Newsletter from "./components/Newsletter";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/account" element={<Account />}></Route>
           <Route path="/main" element={<MainCategory />}></Route>
           <Route path="/info" element={<InfoBoard />}></Route>
+          <Route path="/newsletter" element={<Newsletter />}></Route>
         </Routes>
       </Router>
     </>
