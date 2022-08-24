@@ -4,6 +4,9 @@ import Splash from "./components/Splash";
 import Home from "./components/Home";
 import Account from "./components/Account";
 import MyPage from "./components/MyPage";
+import MainCategory from "./components/MainCategory";
+import InfoBoard from "./components/InfoBoard";
+import Newsletter from "./components/Newsletter";
 
 const App = () => {
   return (
@@ -14,6 +17,9 @@ const App = () => {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/account" element={<Account />}></Route>
           <Route path="/mypage" element={<MyPage />}></Route>
+          <Route path="/main" element={<MainCategory />}></Route>
+          <Route path="/info" element={<InfoBoard />}></Route>
+          <Route path="/newsletter" element={<Newsletter />}></Route>
         </Routes>
       </Router>
     </>
