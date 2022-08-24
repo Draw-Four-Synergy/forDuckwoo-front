@@ -8,7 +8,10 @@ const MainCategory = () => {
       <Navbar />
       <div className="main-category">
         <div className="main-btn">
-          <button id="main-btn1">
+          <button
+            id="main-btn1"
+            onClick={() => (window.location.href = "/newsletter")}
+          >
             News
             <br />
             Letters

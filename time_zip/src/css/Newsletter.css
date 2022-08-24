@@ -1,0 +1,14 @@
+.newsletter{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+}
+
+.newsletter_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
