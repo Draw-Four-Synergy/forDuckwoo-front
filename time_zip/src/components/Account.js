@@ -9,7 +9,6 @@ function Account () {
     const [btnName, setBtnName] = useState("로그인하기");
 
     const onClick = (event) => {
-        console.log(btnName, isNew);
         if(btnName === "로그인하기"){
             setIsNew(false);
             setBtnName("가입하기");
@@ -22,7 +21,7 @@ function Account () {
     return (
         <div className="content">
             <div className="container">
-                <img src={logo}></img>
+                <img src={logo} alt=""></img>
                 {isNew ? <SignIn/> : <LogIn/>}
                 <span className="textLink" onClick={onClick}>{btnName}</span>
             </div> 

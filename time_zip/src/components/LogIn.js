@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 function LogIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
     const onChange = (event) => {
         const {target: {name, value}} = event;
@@ -13,9 +15,21 @@ function LogIn() {
         }
     };
 
+    const connectAccount = async() => {
+        const response = await axios({
+            method: "post",
+            url: "http://3.36.252.208:9000/auth/login",
+            data: {
+                email: email,
+                pwd: password,
+            },
+        });
+        setError(response.data.message);
+    };
+
     const onSubmit = async(event) => {
         event.preventDefault();
-
+        connectAccount();
     };
 
     return (
@@ -44,6 +58,7 @@ function LogIn() {
                 value={"로그인"}
                 className="formBtn"
             />
+            {error !== "" && <h5 className="errorMessage">{error}</h5>}
         </form>
     );
 };

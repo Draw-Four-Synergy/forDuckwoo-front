@@ -72,3 +72,7 @@ hr {
 .textLink:hover {
     color: black;
 }
+
+.errorMessage {
+    color: #CE4D4D;
+}
