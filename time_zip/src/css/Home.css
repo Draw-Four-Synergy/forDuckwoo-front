@@ -5,36 +5,37 @@
 
 @media all and (min-width:768px) {
     .homeImg {
-    width: 100vh;
-    height: 100%;
-    position: absolute;
-    clip: rect( 0px, 100vh, 100vh, 0px );
+        width: 100vh;
+        height: 100%;
+        position: absolute;
+        clip: rect(0px, 100vh, 100vh, 0px);
     }
 }
 
 
-@media all and (max-width: 768px){
-    .homeImg{
+@media all and (max-width: 768px) {
+    .homeImg {
         width: 70vh;
         height: 100%;
         position: absolute;
-        clip: rect( 0px, 34vh, 100vh, 0px );
+        clip: rect(0px, 34vh, 100vh, 0px);
     }
 }
-  
-@media all and (min-width: 768px){
-    .homeImg{
+
+@media all and (min-width: 768px) {
+    .homeImg {
         width: 120vh;
         height: 100%;
         position: absolute;
-        clip: rect( 0px, 120vh, 100vh, 0px );
+        clip: rect(0px, 120vh, 100vh, 0px);
     }
-    .home-small-text{
+
+    .home-small-text {
         justify-content: center;
     }
 }
 
-.Home{
+.Home {
     background-color: #535353;
     font-family: "PretendardMedium";
     height: 100vh;
@@ -42,11 +43,11 @@
     margin: auto;
 }
 
-.home-top{
-    display:flex;
+.home-top {
+    display: flex;
 }
 
-.home-small-text{
+.home-small-text {
     position: absolute;
     top: 15%;
     right: 9%;
@@ -54,15 +55,15 @@
     font-size: 17px;
 }
 
-.logoImg{
+.logoImg {
     position: absolute;
     top: 8%;
-    right: 2%; 
+    right: 2%;
     width: 50%;
     background: none;
 }
 
-.login-btn, .signup-btn{
+.continue-btn {
     position: absolute;
     color: #CE4D4D;
     background: none;
@@ -70,19 +71,11 @@
     padding: 10px 30px 10px 30px;
     border: 2px solid #CE4D4D;
     border-radius: 50px;
-}
-
-.login-btn{
     bottom: 15%;
     right: 14%;
 }
 
-.login-btn:hover, .signup-btn:hover{
+.continue-btn:hover {
     background-color: #CE4D4D;
     color: #FFFFFF;
-}
-
-.signup-btn{
-    bottom: 7%;
-    right: 11.5%;
 }

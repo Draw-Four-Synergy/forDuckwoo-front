@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+}
+
+hr {
+    width: 100%;
+    height: 4px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formInput {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.formBtn {
+    width: 100%;
+    padding: 7px 20px;
+    text-align: center;
+    color: #CE4D4D;
+    background: none;
+    border-radius: 20px;
+    border: 2px solid #CE4D4D;
+    cursor: pointer;
+}
+
+.formBtn:hover {
+    background-color: #CE4D4D;
+    color: #FFFFFF;
+}
+
+/* Account(LogIn, SignIn) Page */
+
+.accountForm {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    padding-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textLink {
+    text-align: center;
+    text-decoration: underline;
+    color: darkgray;
+}
+
+.textLink:hover {
+    color: black;
+}
