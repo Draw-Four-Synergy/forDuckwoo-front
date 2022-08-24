@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 
-.main-category{
+.main-category {
     margin: 8vh 5vh 0vh 5vh;
 }
 
-.main-btn{
+.main-btn {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, 1fr);
@@ -12,8 +12,8 @@
     column-gap: 20px;
 }
 
-#main-btn1{
-    color:#FFFFFF;
+#main-btn1 {
+    color: #FFFFFF;
     font-family: "Abril Fatface", serif;
     grid-row: 1/4;
     grid-column: 1/2;
@@ -23,8 +23,8 @@
     border-radius: 20px;
 }
 
-#main-btn2{
-    color:#FFFFFF;
+#main-btn2 {
+    color: #FFFFFF;
     font-family: "Abril Fatface", serif;
     grid-row: 1/3;
     grid-column: 2/3;
@@ -34,8 +34,8 @@
     border-radius: 20px;
 }
 
-#main-btn3{
-    color:#FFFFFF;
+#main-btn3 {
+    color: #FFFFFF;
     font-family: "Abril Fatface", serif;
     grid-row: 3/4;
     grid-column: 2/3;
@@ -45,8 +45,8 @@
     border-radius: 20px;
 }
 
-#main-btn4{
-    color:#FFFFFF;
+#main-btn4 {
+    color: #FFFFFF;
     font-family: "Abril Fatface", serif;
     grid-row: 4/5;
     grid-column: 1/3;
@@ -57,8 +57,8 @@
     border-radius: 20px;
 }
 
-#main-btn5{
-    color:#FFFFFF;
+#main-btn5 {
+    color: #FFFFFF;
     font-family: "Abril Fatface", serif;
     grid-row: 5/6;
     grid-column: 1/3;
@@ -68,14 +68,16 @@
     border-radius: 20px;
 }
 
-#main-btn1:hover{
+#main-btn1:hover {
     font-size: 6vh;
 }
 
-#main-btn2:hover, #main-btn4:hover, #main-btn5:hover{
+#main-btn2:hover,
+#main-btn4:hover,
+#main-btn5:hover {
     font-size: 5vh;
 }
 
-#main-btn3:hover{
+#main-btn3:hover {
     font-size: 4vh;
 }

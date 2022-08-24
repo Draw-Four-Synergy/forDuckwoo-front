@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../css/MyPage.css";
 
+
 function MyPage({ userObj }){
     const [img, setImg] = useState("");
     const [nickName, setNickName] = useState("");
@@ -26,8 +27,14 @@ function MyPage({ userObj }){
         <div className="mypage_content">
             <div className="mypage_container">
             <img className="badge" src={img} alt=""></img>
-            <span>{nickName}</span>
-        </div>
+                <span class="mypage_nickname">{nickName}</span>
+                <div className="mypage_scrap">
+                    스크랩
+                </div>
+                <div className="mypage_scrap">
+                    단어장
+                </div>
+            </div>
         </div>
         
     );
