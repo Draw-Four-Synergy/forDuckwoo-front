@@ -25,6 +25,11 @@ function LogIn() {
             },
         });
         setError(response.data.message);
+        console.log(response.data);
+        if(response.data.isSuccess === true){
+            // response.data.result.jwt 저장
+        }
+        
     };
 
     const onSubmit = async(event) => {
