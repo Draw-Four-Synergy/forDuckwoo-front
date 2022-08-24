@@ -3,6 +3,10 @@
     src: url("../fonts/Pretendard-Medium.ttf");
 }
 
+* {
+    overflow:hidden;
+}
+
 @media all and (min-width:768px) {
     .homeImg {
         width: 100vh;
@@ -41,6 +45,7 @@
     height: 100vh;
     width: 100%;
     margin: auto;
+    
 }
 
 .home-top {

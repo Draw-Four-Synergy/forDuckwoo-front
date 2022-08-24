@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+
+.main-category{
+    margin: 8vh 5vh 0vh 5vh;
+}
+
+.main-btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 4vh;
+    column-gap: 20px;
+}
+
+#main-btn1{
+    color:#FFFFFF;
+    font-family: "Abril Fatface", serif;
+    grid-row: 1/4;
+    grid-column: 1/2;
+    background-color: #DA8686;
+    font-size: 5.5vh;
+    border: none;
+    border-radius: 20px;
+}
+
+#main-btn2{
+    color:#FFFFFF;
+    font-family: "Abril Fatface", serif;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    background-color: #1F1F1F;
+    font-size: 4.5vh;
+    border: none;
+    border-radius: 20px;
+}
+
+#main-btn3{
+    color:#FFFFFF;
+    font-family: "Abril Fatface", serif;
+    grid-row: 3/4;
+    grid-column: 2/3;
+    background-color: #494F63;
+    font-size: 3.5vh;
+    border: none;
+    border-radius: 20px;
+}
+
+#main-btn4{
+    color:#FFFFFF;
+    font-family: "Abril Fatface", serif;
+    grid-row: 4/5;
+    grid-column: 1/3;
+    background-color: #CE4D4D;
+    font-size: 4.5vh;
+    height: 12vh;
+    border: none;
+    border-radius: 20px;
+}
+
+#main-btn5{
+    color:#FFFFFF;
+    font-family: "Abril Fatface", serif;
+    grid-row: 5/6;
+    grid-column: 1/3;
+    background-color: #623939;
+    font-size: 4.5vh;
+    border: none;
+    border-radius: 20px;
+}
+
+#main-btn1:hover{
+    font-size: 6vh;
+}
+
+#main-btn2:hover, #main-btn4:hover, #main-btn5:hover{
+    font-size: 5vh;
+}
+
+#main-btn3:hover{
+    font-size: 4vh;
+}
