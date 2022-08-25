@@ -5,7 +5,6 @@ import axios from "axios";
 import sad from "../img/sad.png";
 import angry from "../img/angry.png";
 import scrap from "../img/scrap.png";
-import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import Navbar from "./Navbar";
 
@@ -15,9 +14,6 @@ function Englishnews() {
   const [news, setNews] = useState([]);
   const [emoticon, SetEmoticon] = useState([]);
 
-  let [like, setLike] = useState(0);
-  //   let [emoName, setEmoName] = useState(["좋아요", "슬퍼요", "화나요"]);
-
   useEffect(() => {
     axios({
       method: "get",
@@ -25,7 +21,6 @@ function Englishnews() {
     }).then((response) => {
       if (response.data.isSuccess) {
         setNews(response.data);
-        // console.log(response.data);
       } else {
         console.log("상세 영어 기사 불러오기 실패");
       }

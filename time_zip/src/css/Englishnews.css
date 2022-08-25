@@ -76,21 +76,6 @@
     display: flex;
 }
 
-/* .englishnews_scrap {
-    overflow: hidden;
-    width: 30%;
-    height: 100px;
-    padding: 10px 20px;
-    margin: 30px 10px;
-    border-radius: 20px;
-    border: 2px solid #DA8686;
-    text-align: center;
-    background-color: #FFFFFF;
-    color: black;
-} */
-
-.emoticon-num{
-}
 .scrap-btn{
     position: absolute;
     right: 10%;
