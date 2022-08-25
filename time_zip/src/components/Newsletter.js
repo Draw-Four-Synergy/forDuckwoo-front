@@ -43,7 +43,7 @@ function Newsletter() {
         <Navbar />
           <h1> Newsletter </h1>
 
-          <h3>인기순</h3>
+          <h3 className="sort_title">인기순</h3>
 
           <div className="Newsletter_row">
             {/* {newsArr && newsArr.result?.map((el)=><Nproduct data={el}/>)} */}
@@ -55,7 +55,7 @@ function Newsletter() {
             )}
           </div>
 
-          <h3>최신순</h3>
+          <h3 className="sort_title">최신순</h3>
 
           <div className="Newsletter_row">
             {recNewsArr.result && (
