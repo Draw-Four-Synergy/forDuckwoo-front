@@ -1,7 +1,6 @@
 import "../css/Word.css";
 
 function Word({ data }){
-    console.log(data);
     return (
         <div className="word_box">
             <span className="word">{data?.word}</span>

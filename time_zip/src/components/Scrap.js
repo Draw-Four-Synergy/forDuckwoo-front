@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Nproduct from "./Nproduct";
+import Article from "./Article";
+import "../css/Scrap.css";
 
 
 function Scrap(){
@@ -13,6 +15,7 @@ function Scrap(){
                 "x-access-token" : jwt
             }
         });
+        console.log(response.data);
         if(response.data.isSuccess === true){
             setNewsArr(response.data);
         }
@@ -23,10 +26,13 @@ function Scrap(){
     }, []);
 
     return(
-        <div>
+        <div className="scrap_content">
+            <div className="scrap_container">
             <Navbar />
-            {newsArr && newsArr.result?.map((el)=><Nproduct data={el}/>)}
+            {newsArr && newsArr.result?.map((el)=><Article data={el}/>)}
+            </div>
         </div>
+        
     );
 };
 

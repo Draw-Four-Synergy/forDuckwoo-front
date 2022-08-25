@@ -1,5 +1,4 @@
-.word_box {
-    max-width: 400px;
+.article_box {
     background-color: white;
     margin: 10px;
     font-weight: 300;
@@ -15,8 +14,8 @@
         0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
 
-.word {
+.article_title {
     text-decoration: solid;
-    background-color: yellow;
+    background-color: lightblue;
     font-size: large;
 }

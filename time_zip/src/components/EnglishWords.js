@@ -23,10 +23,13 @@ function EnglishWords() {
     }, []);
 
     return(
-        <div className="english_words_container">
-            <Navbar />
-            {wordsArr && wordsArr.result?.map((el)=><Word data={el}/>)}
+        <div className="english_words_content">
+            <div className="english_words_container">
+                <Navbar />
+                {wordsArr && wordsArr.result?.map((el)=><Word data={el}/>)}
+            </div>
         </div>
+        
     );
 }
 
