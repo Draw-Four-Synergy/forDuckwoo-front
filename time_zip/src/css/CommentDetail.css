@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "PretendardMedium";
+    src: url("../fonts/Pretendard-Medium.ttf");
+}
+
+.CommentDetail{
+    font-family: "PretendardMedium";
+}
+.comment-profile{
+    margin-top: 1vh;
+}
+
+.comment-user{
+    display: flex;
+}
+
+
+.profile-commentImg{
+    margin-left: 2vh;
+}
+
+.comment-user-nickname{
+    margin-left: 1vh;
+    margin-top: 1vh;
+}
+
+.comment-user-comment{
+    margin-left: 9.3vh;
+    padding-bottom: 1vh;
+}

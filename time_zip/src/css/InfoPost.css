@@ -27,3 +27,49 @@
 .profile-Img{
     margin-left: 1vh;
 }
+
+.info-back-button{
+    background-color: #DA8686;
+    color: #FFFFFF;
+    font-family: "PretendardMedium";
+    padding: 0.5vh 2vh 0.5vh 2vh;
+    border: none;
+    margin-left: 9.5vh;
+    margin-top: 2.5vh;
+}
+
+.info-back-button:hover{
+    background-color: #623939;
+}
+
+.inputComment{
+    background-color: #C0C0C0;
+    color: #000000;
+    border-radius: 30px;
+    border: none;
+    
+    margin:  1vh 2vh 3vh 2vh;
+    padding: 1vh 3vh 1vh 3vh;
+    width: 80%;
+}
+
+.inputComment::placeholder{
+    color: #F3F3F3;
+}
+
+.inputComment:focus{
+    outline: none;
+}
+
+.commentBtn{
+    background-color: #CE4D4D;
+    color: #FFFFFF;
+    border: none;
+    padding: 1vh 1vh 1vh 1vh;
+    border-radius: 30px;
+    width: 10%;
+}
+
+.commentBtn:hover{
+    background-color: #623939;
+}

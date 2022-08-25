@@ -6,7 +6,6 @@ import writeBtn from "../img/write.png";
 import InfoDetail from "./InfoDetail";
 
 const InfoBoard = () => {
-  const [choose, setChoose] = useState(false);
   const [item, setItem] = useState(0);
   const [info, setInfo] = useState([]);
 
@@ -45,7 +44,6 @@ const InfoBoard = () => {
       <div className="info-btn-wrap">
         <button
           id="info-btn0"
-          className={`info-btn0-${choose ? "choose" : "none"}`}
           onClick={() => {
             onClick(0);
           }}
@@ -54,7 +52,6 @@ const InfoBoard = () => {
         </button>
         <button
           id="info-btn1"
-          className={`info-btn1-${choose ? "choose" : "none"}`}
           onClick={() => {
             onClick(1);
           }}
@@ -63,7 +60,6 @@ const InfoBoard = () => {
         </button>
         <button
           id="info-btn2"
-          className={`info-btn2-${choose ? "choose" : "none"}`}
           onClick={() => {
             onClick(2);
           }}
@@ -72,7 +68,6 @@ const InfoBoard = () => {
         </button>
         <button
           id="info-btn3"
-          className={`info-btn3-${choose ? "choose" : "none"}`}
           onClick={() => {
             onClick(3);
           }}
@@ -81,7 +76,6 @@ const InfoBoard = () => {
         </button>
         <button
           id="info-btn4"
-          className={`info-btn4 hover ${choose ? "choose" : "none"}`}
           onClick={() => {
             onClick(4);
           }}
