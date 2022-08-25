@@ -13,6 +13,7 @@ import English from "./components/English";
 import News from "./components/News";
 import Scrap from "./components/Scrap";
 import InfoPost from "./components/InfoPost";
+import EnglishWords from "./components/EnglishWords";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/english" element={<English />}></Route>
           <Route path="/scrap" element={<Scrap />}></Route>
           <Route path="/infopost" element={<InfoPost />}></Route>
+          <Route path="/english_words" element={<EnglishWords />}></Route>
         </Routes>
       </Router>
     </>

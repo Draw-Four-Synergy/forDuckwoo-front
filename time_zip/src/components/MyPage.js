@@ -4,6 +4,7 @@ import "../css/MyPage.css";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import scrap_img from "../img/scrap.png";
+import english_img from "../img/english.png";
 
 function MyPage({ userObj }){
     const [img, setImg] = useState("");
@@ -29,20 +30,26 @@ function MyPage({ userObj }){
     return (
         <div className="mypage_content">
             <div className="mypage_container">
-            <Navbar />
-            <img className="badge" src={img} alt=""></img>
+                <Navbar />
+                <img className="badge" src={img} alt=""></img>
                 <span class="mypage_nickname">{nickName}</span> 
-                    <div className="mypage_scrap">
-                        <img className="mypage_scrap_img" src={scrap_img} alt=""></img>
-                        <Link 
-                            to="/scrap" 
-                            style={{textDecoration: 'inherit', color: 'inherit'}}
-                        >
-                            <span>스크랩</span>
-                        </Link>
-                    </div>                
                 <div className="mypage_scrap">
-                    <span>단어장</span>
+                    <img className="mypage_img" src={scrap_img} alt=""></img>
+                    <Link 
+                        to="/scrap" 
+                        style={{textDecoration: 'inherit', color: 'inherit'}}
+                    >
+                        <span>스크랩</span>
+                    </Link>
+                </div>                
+                <div className="mypage_scrap">
+                <img className="mypage_img" src={english_img} alt=""></img>
+                    <Link 
+                        to="/english_words" 
+                        style={{textDecoration: 'inherit', color: 'inherit'}}
+                    >
+                        <span>영단어</span>
+                    </Link>
                 </div>
             </div>
         </div>
