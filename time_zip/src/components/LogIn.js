@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function LogIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     const onChange = (event) => {
         const {target: {name, value}} = event;
@@ -24,6 +26,11 @@ function LogIn() {
                 pwd: password,
             },
         });
+        if(response.data.isSuccess){
+            const jwt = response.data.result.jwt;
+            localStorage.setItem('jwt', jwt);
+            navigate("/main");
+        }
         setError(response.data.message);
     };
 

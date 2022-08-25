@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
 import "../css/MainCategory.css";
 
@@ -21,7 +22,14 @@ const MainCategory = () => {
             <br />
             Article
           </button>
-          <button id="main-btn3">My Page</button>
+          <button id="main-btn3">
+            <Link 
+              to="/my_page" 
+              style={{ color: 'inherit', textDecoration: 'inherit' }}
+            >
+              My Page
+            </Link>
+          </button>
           <button id="main-btn4">Audio Book</button>
           <button
             id="main-btn5"
