@@ -2,7 +2,13 @@
     box-sizing: border-box;
 }
 
+.news_content {
+    width: 100%;
+    height: 100%;
+}
+
 .englishnews {
+    overflow: hidden;
     width: 100%;
     margin: 0px;
 
@@ -29,9 +35,9 @@
 }
 
 .englishnews_page {
+    overflow: hidden;
     width: 100%;
     height: 450px;
-    padding: 10px 20px;
     margin: 20px 30px;
     border-radius: 20px;
     border: 1px solid rgb(117, 117, 117);
@@ -64,7 +70,14 @@
     justify-content: flex-start;
 }
 
+.englishnews_smile,
+.englishnews_sad,
+.englishnews_angry {
+    overflow: hidden;
+}
+
 .englishnews_scrap {
+    overflow: hidden;
     width: 150px;
     height: 100px;
     padding: 10px 20px;

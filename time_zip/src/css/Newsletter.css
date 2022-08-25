@@ -13,3 +13,11 @@
     justify-content: center;
     width: 100%;
 }
+
+.Newsletter_row {
+    overflow: hidden;
+}
+
+.sort_title {
+    margin-bottom: 0px;
+}
