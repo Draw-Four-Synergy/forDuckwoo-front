@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import scrap_img from "../img/scrap.png";
 import english_img from "../img/english.png";
+import b1 from "../img/덕새1.png";
+import b2 from "../img/덕새2.png";
+import b3 from "../img/덕새3_흑백.png";
+import b4 from "../img/덕새4_흑백.png";
+
 
 function MyPage({ userObj }){
     const [img, setImg] = useState("");
@@ -31,8 +36,15 @@ function MyPage({ userObj }){
         <div className="mypage_content">
             <div className="mypage_container">
                 <Navbar />
-                <img className="badge" src={img} alt=""></img>
+                <img className="profile_img" src={img} alt=""></img>
                 <span class="mypage_nickname">{nickName}</span> 
+                <div className="badge_container">
+                    <img className="badge" src={b1} alt=""></img>
+                    <img className="badge" src={b2} alt=""></img>
+                    <img className="badge" src={b3} alt=""></img>
+                    <img className="badge" src={b4} alt=""></img>
+                </div>
+                
                 <div className="mypage_scrap">
                     <img className="mypage_img" src={scrap_img} alt=""></img>
                     <Link 
