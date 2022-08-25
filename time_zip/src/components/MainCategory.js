@@ -2,8 +2,12 @@ import React from "react";
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
 import "../css/MainCategory.css";
+import { useLocation } from "react-router-dom";
 
 const MainCategory = () => {
+  const location = useLocation();
+  const jwt = location.state.jwt;
+
   return (
     <div className="MainCategory">
       <Navbar />
@@ -23,7 +27,10 @@ const MainCategory = () => {
             Article
           </button>
           <button id="main-btn3">
-            <Link to="/my_page" style={{color: 'inherit', textDecoration: 'inherit'}}>
+            <Link 
+              to="/my_page" 
+              style={{ color: 'inherit', textDecoration: 'inherit' }}
+              state={{ jwt : jwt }}>
               My Page
             </Link>
           </button>

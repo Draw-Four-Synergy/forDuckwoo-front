@@ -1,16 +1,19 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../css/MyPage.css";
+import { useLocation } from "react-router-dom";
 
 
 function MyPage({ userObj }){
     const [img, setImg] = useState("");
     const [nickName, setNickName] = useState("");
+    const location = useLocation();
+    const jwt = location.state.jwt;
 
     const getInfo = async() => {
         const response = await axios.get("http://3.36.252.208:9000/users", {
             headers: {
-                "x-access-token": "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWQiOjgsImlhdCI6MTY2MTM0NDc5OSwiZXhwIjoxNjYyODE2MDI4fQ._88n5pKCZSCuOy3UXdYCbCQw7x3PjmVeWEpxMKqbpo0"
+                "x-access-token" : jwt
             }
         });
         if(response.data.isSuccess === true){
@@ -21,7 +24,7 @@ function MyPage({ userObj }){
 
     useEffect(() => {
         getInfo();
-    }, []);
+    });
 
     return (
         <div className="mypage_content">
