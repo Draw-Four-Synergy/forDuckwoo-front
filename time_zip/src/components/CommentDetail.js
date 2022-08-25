@@ -2,8 +2,6 @@ import React from "react";
 import "../css/CommentDetail.css";
 
 const CommentDetail = ({ data }) => {
-  //   console.log(data);
-
   return (
     <div className="CommentDetail">
       <div className="comment-profile">

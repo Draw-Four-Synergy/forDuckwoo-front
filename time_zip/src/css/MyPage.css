@@ -1,18 +1,18 @@
 .mypage_content {
-    margin: 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .mypage_container {
     width: 100%;
-    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .badge {
+    margin-top: 7vh;
     width: 128px;
     height: 128px;
     border-radius: 40px;

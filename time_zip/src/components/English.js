@@ -45,11 +45,10 @@ function Newsletter() {
           <h3>Popular</h3>
 
           <div className="Newsletter_row">
-            {/* {newsArr && newsArr.result?.map((el)=><Nproduct data={el}/>)} */}
             {newsArr.result && (
               <>
-                <Nproduct data={newsArr?.result[0]} language="eng" />
-                <Nproduct data={newsArr?.result[1]} language="eng" />
+                <Nproduct data={newsArr.result[0]} language="eng" />
+                <Nproduct data={newsArr.result[1]} language="eng" />
               </>
             )}
           </div>
@@ -59,10 +58,10 @@ function Newsletter() {
           <div className="Newsletter_row">
             {recNewsArr.result && (
               <>
-                <Nproduct data={recNewsArr?.result[0]} language="eng" />
-                <Nproduct data={recNewsArr?.result[1]} language="eng" />
-                <Nproduct data={recNewsArr?.result[2]} language="eng" />
-                <Nproduct data={recNewsArr?.result[3]} language="eng" />
+                <Nproduct data={recNewsArr.result[0]} language="eng" />
+                <Nproduct data={recNewsArr.result[1]} language="eng" />
+                <Nproduct data={recNewsArr.result[2]} language="eng" />
+                <Nproduct data={recNewsArr.result[3]} language="eng" />
               </>
             )}
           </div>
