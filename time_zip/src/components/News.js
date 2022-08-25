@@ -19,6 +19,9 @@ function News () {
     const location = useLocation();
     const category = location.state.category;
     const id = location.state.id;
+    console.log(id);
+    
+    
 
     let [like, setLike]=useState(0);
     let [emoName, setEmoName] = useState([
@@ -33,8 +36,10 @@ function News () {
                 "x-access-token" : jwt
             }
         });
+        console.log(response.data);
         if(response.data.isSuccess === true){
             setNews(response.data.result);
+            
         }
     };
 
