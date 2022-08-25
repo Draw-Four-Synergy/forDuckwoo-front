@@ -44,13 +44,18 @@ function Nproduct({ data, language }) {
             </button>
           </>
         )}
-
-        {/* {language === "eng" && <Link to="/english_news" category="en_news" id={data?.id}>View</Link>} */}
-        {/* {language === "audio" && <Link to="/audio" data={data}>View</Link>} */}
-
-        {/* {language === "kor" && <button onClick={() => (window.location.href = "/news")}>View</button>} */}
-        {/* {language === "eng" && <button onClick={() => (window.location.href = "/english_news")}>View</button>} */}
-        {/* {language === "audio" && <button onClick={() => (window.location.href = "/audio")}>View</button>} */}
+            {language === "audio" && 
+                <>
+                    <button>
+                        <Link 
+                            to="/audio" 
+                            state={{category:"audio", id:data?.id}} 
+                            style={{textDecoration: 'inherit', color: 'inherit'}}>
+                            View
+                        </Link>
+                    </button>
+                </>
+            }
       </div>
     </>
   );
