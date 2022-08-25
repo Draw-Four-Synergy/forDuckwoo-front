@@ -30,7 +30,12 @@ const MainCategory = () => {
           >
             My Page
           </button>
-          <button id="main-btn4">Audio Book</button>
+          <button
+           id="main-btn4"
+           onClick={() => (window.location.href = "/audiobook")}
+          >
+            Audio Book
+          </button>
           <button
             id="main-btn5"
             onClick={() => (window.location.href = "/info")}

@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { Formik } from "formik";
 import axios from "axios";
 import Navbar from "./Navbar";
 import "../css/InfoWrite.css";
 
 const InfoWrite = () => {
-  const [item, setItem] = useState(null);
-  const navigate = useNavigate();
+  const [item, setItem] = useState();
 
   const submit = async (values) => {
     const value = values || {};
@@ -27,7 +25,6 @@ const InfoWrite = () => {
       if (response.data.isSuccess) {
         console.log(response.data);
         console.log("작성 성공");
-        navigate("/info");
       } else {
         console.log(item);
         console.log("작성 실패");
@@ -54,8 +51,9 @@ const InfoWrite = () => {
       <Navbar />
       <div className="info-containter">
         <Formik
-          initialValues={{ content: "", tags: 1 }}
+          initialValues={{ content: "", tags: null }}
           onSubmit={(data, { setSubmitting }) => {
+            console.log(item);
             setSubmitting(true);
             submit(data);
             setSubmitting(false);
@@ -112,6 +110,7 @@ const InfoWrite = () => {
                       className="post-btn"
                       type="submit"
                       disabled={isSubmitting}
+                      onClick={() => (window.location.href = "/info")}
                     >
                       POST
                     </button>

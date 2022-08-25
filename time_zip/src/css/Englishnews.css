@@ -1,53 +1,59 @@
+@font-face {
+    font-family: "PretendardMedium";
+    src: url("../fonts/Pretendard-Medium.ttf");
+}
+
 * {
     box-sizing: border-box;
+}
+
+.englishnews{
+    height: 60%;
 }
 
 .news_content {
     width: 100%;
     height: 100%;
+    font-family: "PretendardMedium";
 }
 
 .englishnews {
     overflow: hidden;
     width: 100%;
     margin: 0px;
-
-    max-width: 800px;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-
-    padding: 30px;
     color: #CE4D4D;
-    font-family: "PretendardMedium";
     align-items: center;
 }
 
 .englishnews_title {
-    width: 100%;
-    padding: 10px 20px;
-    margin: 10px 30px;
-    border-radius: 20px;
+    width: 80%;
+    padding: 1vh 2vh 1vh 2vh;
+    margin: 1vh 2vh 1vh 2vh;
+    border-radius: 50px;
     border: 1px solid rgb(117, 117, 117);
     text-align: center;
-    background-color: white;
+    background-color: #E4E4E4;
     color: black;
 }
 
 .englishnews_page {
     overflow: hidden;
-    width: 100%;
-    height: 450px;
+    width: 80%;
+    height: 340px;
     margin: 20px 30px;
-    border-radius: 20px;
-    border: 1px solid rgb(117, 117, 117);
+    border-radius: 0px;
+    border: none;
+    outline: none;
     text-align: center;
     background-color: white;
     color: black;
 }
 
 .englishnews_emoscrap {
-    width: 100%;
+    width: 90%;
     height: 160px;
     display: flex;
     flex-flow: row nowrap;
@@ -56,57 +62,69 @@
 
 .englishnews_emo {
     width: 200px;
-    height: 100px;
-    padding: 10px 20px;
-    margin: 30px;
-    border-radius: 20px;
-    border: 1px solid #CE4D4D;
+    margin: 2px 30px 30px 30px;
     text-align: center;
     color: black;
-    background-color: rgb(255, 203, 203);
-
+    background-color: #FFFFFF;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
 }
 
 .englishnews_smile,
 .englishnews_sad,
 .englishnews_angry {
     overflow: hidden;
+    display: flex;
 }
 
-.englishnews_scrap {
+/* .englishnews_scrap {
     overflow: hidden;
-    width: 150px;
+    width: 30%;
     height: 100px;
     padding: 10px 20px;
     margin: 30px 10px;
     border-radius: 20px;
-    border: 1px solid #CE4D4D;
+    border: 2px solid #DA8686;
     text-align: center;
-    background-color: rgb(255, 203, 203);
+    background-color: #FFFFFF;
     color: black;
+} */
+
+.emoticon-num{
+}
+.scrap-btn{
+    position: absolute;
+    right: 10%;
 }
 
 
-.chart>button:hover {
+.chart:hover {
+    overflow: hidden;
     background-color: #CE4D4D;
     color: #FFFFFF;
 }
 
 .chart {
-    width: 80px;
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
+    width: 200px;
+    bottom: -15vh;
+    font-size: 1rem;
     align-items: center;
-
-    height: 50px;
+    text-decoration: none;
     padding: 10px 10px;
-    margin: 10px;
-    border-radius: 20px;
-    border: 1px solid #CE4D4D;
+    margin: 3vh 10vh 3vh 10vh;
+    border-radius: 100px;
+    border: none;
     text-align: center;
-    background-color: rgb(255, 255, 255);
-    color: black;
+    background-color: #DA8686;
+    color: white;
+}
+
+.scrap-btn{
+    width: 100px;
+    border: none;
+    padding: 10px 10px;
+    color: #000000;
+    font-size: 1rem;
+    border-radius: 100px;
+    
 }
