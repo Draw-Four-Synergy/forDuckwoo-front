@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "PretendardMedium";
+    src: url("../fonts/Pretendard-Medium.ttf");
+}
+
+* {
+    overflow: auto;
+}
+
+
+#info-btn0, #info-btn1, #info-btn2, #info-btn3, #info-btn4{
+    background-color: #DA8686;
+    border: none;
+    margin-top: 2vh;
+    border-radius: 50px;
+    font-family: "PretendardMedium";
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    padding: 1.5vh 3vh 1.5vh 3vh;
+    margin-left: 1vh;
+}
+
+.writebtn{
+    position: absolute;
+    top: 9.7%;
+    margin-left: 3vh;
+    width: 30px;
+    height: 30px;
+    margin-right: 1vh;
+}

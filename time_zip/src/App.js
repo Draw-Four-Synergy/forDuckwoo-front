@@ -6,7 +6,7 @@ import Account from "./components/Account";
 import MainCategory from "./components/MainCategory";
 import InfoBoard from "./components/InfoBoard";
 import Newsletter from "./components/Newsletter";
-import MyPage from "./components/MyPage";
+import InfoWrite from "./components/InfoWrite";
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/main" element={<MainCategory />}></Route>
           <Route path="/info" element={<InfoBoard />}></Route>
           <Route path="/newsletter" element={<Newsletter />}></Route>
-          <Route path="/my_page" element={<MyPage />}></Route>
+          <Route path="/infowrite" element={<InfoWrite />}></Route>
         </Routes>
       </Router>
     </>

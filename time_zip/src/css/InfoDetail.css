@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "PretendardMedium";
+    src: url("../fonts/Pretendard-Medium.ttf");
+}
+
+.InfoDetail{
+    font-family: "PretendardMedium";
+}
+
+
+.info-user{
+   display: flex;
+}
+
+.info-profile{
+    margin-top: 2vh;
+}
+
+.info-user-nickname{
+    margin-left: 1vh;
+    margin-top: 2vh;
+}
+
+.info-user-content{
+    margin-left: 9.3vh;
+}
+
+.profileImg{
+    margin-left: 1vh;
+}
