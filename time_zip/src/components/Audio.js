@@ -1,93 +1,108 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import "../css/Englishnews.css";
 import smile from "../img/smile.png";
+import axios from "axios";
 import sad from "../img/sad.png";
 import angry from "../img/angry.png";
 import scrap from "../img/scrap.png";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router";
 import Navbar from "./Navbar";
-import { useLocation } from "react-router-dom";
-import axios from 'axios';
 
+function Audio() {
+  const location = useLocation();
 
-function Audio () {
-    /*const audiobook_emo = () => {
-        const[item, setItem] = useState(0)
-        const incrementItem = () => setItem(item+1)
-    }*/
-    const jwt = localStorage.getItem('jwt');
-    const location = useLocation();
-    const category = location.state.category;
-    const id = location.state.id;
-    console.log(id);
-    
-    
+  const [audio, setAudio] = useState([]);
+  const [emoticon, SetEmoticon] = useState([]);
 
-    let [like, setLike]=useState(0);
-    let [emoName, setEmoName] = useState([
-        "좋아요", "슬퍼요", "화나요"
-    ]);
+  let [like, setLike] = useState(0);
+  //   let [emoName, setEmoName] = useState(["좋아요", "슬퍼요", "화나요"]);
 
-    const [audio, setAudio] = useState([]);
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: `http://3.36.252.208:9000/contents/${location.state.category}/${location.state.id}`,
+    }).then((response) => {
+      if (response.data.isSuccess) {
+        setAudio(response.data);
+        // console.log(response.data);
+      } else {
+        console.log("상세 오디오 불러오기 실패");
+      }
+    });
+  }, []);
 
-    const getInfo = async() => {
-        const response = await axios.get(`http://3.36.252.208:9000/contents/${category}/${id}`, {
-            headers: {
-                "x-access-token" : jwt
-            }
-        });
-        console.log(response.data);
-        if(response.data.isSuccess === true){
-            setAudio(response.data.result);
-            
-        }
-    };
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: `http://3.36.252.208:9000/contents/emoticon/${location.state.category}/${location.state.id}`,
+    }).then((response) => {
+      if (response.data.isSuccess) {
+        SetEmoticon(response.data.result);
+        console.log(response.data.result);
+      } else {
+        console.log("이모티콘 불러오기 실패");
+      }
+    });
+  }, []);
 
-    useEffect(() => {
-        getInfo();
-    }, []);
+  const onClick = () => {
+    const current = document.getElementById("scrap-btn");
+    current.style.backgroundColor = "#FFDD2A";
+  };
 
-    return (
-        <div className="englishnews">
-            <Navbar />
-            <h1>Audiobook</h1>
-            <div className="englishnews_title">
-                <p>{audio.title}</p>
-            </div>
+  return (
+    <div className="englishnews">
+      <Navbar />
+      <h1>Audiobook</h1>
+      <div className="englishnews_title">
+        <p>{audio && audio.result?.title}</p>
+      </div>
 
-            <div className="englishnews_page">
-                <iframe className="audio_content" src={audio.content}></iframe>
-            </div>
+      <div className="englishnews_page">
+        <iframe
+          className="news_content"
+          src={audio.result?.content}
+          id="Audiobook"
+          title="audio_content"
+        ></iframe>
+      </div>
 
-            <div className="englishnews_emoscrap">
-                <span className="englishnews_emo">
-                    
-                <span className="englishnews_smile"> <img src={smile} alt="smile" width="30" height="30"></img><p>좋아요</p>
-                <span onClick={() => {setLike(like + 1); }}>좋아요</span>{like} </span>
+      <div className="englishnews_emoscrap">
+        <span className="englishnews_emo">
+          <div className="englishnews_smile">
+            <img src={smile} alt="smile" width="50px" height="50px"></img>
+            <p className="emoticon-num">{emoticon && emoticon.smile}</p>
+          </div>
 
-                <span className="englishnews_sad"> <img src={sad} alt="sad" width="30" height="30"></img><p>슬퍼요</p> 
-                <span onClick={() => {setLike(like + 1); }}>슬퍼요</span>{like} </span>
+          <div className="englishnews_sad">
+            <img src={sad} alt="sad" width="50px" height="50px"></img>
+            <p className="emoticon-num">{emoticon && emoticon.cry}</p>
+          </div>
 
-                <span className="englishnews_angry"> <img src={angry} alt="angry" width="30" height="30"></img><p>화나요</p> 
-                <span onClick={() => {setLike(like + 1); }}>화나요</span>{like} </span>
+          <div className="englishnews_angry">
+            <img src={angry} alt="angry" width="60px" height="50px"></img>
+            <p className="emoticon-num">{emoticon && emoticon.angry}</p>
+          </div>
+        </span>
 
-                </span>
+        <span className="englishnews_scrap">
+          <button className="scrap-btn" id="scrap-btn" onClick={onClick}>
+            <img src={scrap} alt="scrap" width="15%" height="15%"></img>스크랩
+          </button>
+        </span>
+      </div>
 
-                <span className="englishnews_scrap">
-                    <img src={scrap} alt="scrap" width="30" height="30"></img><p>스크랩</p>
-                    <p>스크랩</p>
-
-                </span>
-            </div>
-            
-            <div className="englishnews_chart">
-                <Link to="/audiobook">
-                <button className="chart">목록</button>
-                </Link>
-            </div>
-        </div>
-
-    );
-};
+      <div className="englishnews_chart">
+        <button
+          className="chart"
+          onClick={() => (window.location.href = "/audiobook")}
+        >
+          목록
+        </button>
+      </div>
+    </div>
+  );
+}
 
 export default Audio;
