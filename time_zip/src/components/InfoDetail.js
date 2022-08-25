@@ -3,7 +3,6 @@ import "../css/InfoDetail.css";
 import { useNavigate } from "react-router-dom";
 
 const InfoDetail = ({ data }) => {
-  // console.log(data);
   const navigate = useNavigate();
 
   const onClick = () => {
