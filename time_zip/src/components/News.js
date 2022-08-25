@@ -19,14 +19,6 @@ function News () {
     const location = useLocation();
     const category = location.state.category;
     const id = location.state.id;
-    console.log(id);
-    
-    
-
-    let [like, setLike]=useState(0);
-    let [emoName, setEmoName] = useState([
-        "좋아요", "슬퍼요", "화나요"
-    ]);
 
     const [news, setNews] = useState([]);
 
@@ -39,7 +31,7 @@ function News () {
         console.log(response.data);
         if(response.data.isSuccess === true){
             setNews(response.data.result);
-            
+            console.log(news.angry);
         }
     };
 
@@ -62,21 +54,26 @@ function News () {
             <div className="englishnews_emoscrap">
                 <span className="englishnews_emo">
                     
-                <span className="englishnews_smile"> <img src={smile} alt="smile" width="30" height="30"></img><p>좋아요</p>
-                <span onClick={() => {setLike(like + 1); }}>좋아요</span>{like} </span>
+                <span className="englishnews_smile">
+                    <img src={smile} alt="smile" width="30" height="30"></img>
+                    <p>{news.smile}</p>
+                </span>
 
-                <span className="englishnews_sad"> <img src={sad} alt="sad" width="30" height="30"></img><p>슬퍼요</p> 
-                <span onClick={() => {setLike(like + 1); }}>슬퍼요</span>{like} </span>
+                <span className="englishnews_sad">
+                    <img src={sad} alt="sad" width="30" height="30"></img>
+                    <p>{news.cry}</p> 
+                </span>
 
-                <span className="englishnews_angry"> <img src={angry} alt="angry" width="30" height="30"></img><p>화나요</p> 
-                <span onClick={() => {setLike(like + 1); }}>화나요</span>{like} </span>
+                <span className="englishnews_angry">
+                    <img src={angry} alt="angry" width="30" height="30"></img>
+                    <p>{news.angry}</p> 
+                </span>
 
                 </span>
 
                 <span className="englishnews_scrap">
-                    <img src={scrap} alt="scrap" width="30" height="30"></img><p>스크랩</p>
-                    <p>스크랩</p>
-
+                    <img src={scrap} alt="scrap" width="30" height="30"></img>
+                    <p>스크랩</p> 
                 </span>
             </div>
             

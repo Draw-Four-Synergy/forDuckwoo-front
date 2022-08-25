@@ -1,13 +1,12 @@
-.english_words_content {
+.scrap_content {
     display: flex;
     justify-content: center;
 }
 
-.english_words_container {
+.scrap_container {
     width: 100%;
     max-width: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../img/paper.jpg");
 }
