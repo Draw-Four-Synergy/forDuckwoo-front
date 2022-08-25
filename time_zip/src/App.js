@@ -13,8 +13,6 @@ import English from "./components/English";
 import News from "./components/News";
 import Scrap from "./components/Scrap";
 import InfoPost from "./components/InfoPost";
-import Audiobook from "./components/Audiobook";
-import Audio from "./components/Audio";
 
 const App = () => {
   return (
@@ -34,8 +32,6 @@ const App = () => {
           <Route path="/english" element={<English />}></Route>
           <Route path="/scrap" element={<Scrap />}></Route>
           <Route path="/infopost" element={<InfoPost />}></Route>
-          <Route path="/audiobook" element={<Audiobook />}></Route>
-          <Route path="/audio" element={<Audio />}></Route>
         </Routes>
       </Router>
     </>

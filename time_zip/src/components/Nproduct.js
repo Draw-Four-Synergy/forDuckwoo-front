@@ -42,19 +42,6 @@ function Nproduct({data, language}){
                 </>
             }
 
-            {language === "audio" && 
-                <>
-                    <button>
-                        <Link 
-                            to="/audio" 
-                            state={{category:"audio", id:data?.id}} 
-                            style={{textDecoration: 'inherit', color: 'inherit'}}>
-                            View
-                        </Link>
-                    </button>
-                </>
-            }
-
             {/* {language === "eng" && <Link to="/english_news" category="en_news" id={data?.id}>View</Link>} */}
             {/* {language === "audio" && <Link to="/audio" data={data}>View</Link>} */}
             

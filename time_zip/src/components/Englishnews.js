@@ -1,65 +1,108 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from "react";
 import "../css/Englishnews.css";
 import smile from "../img/smile.png";
+import axios from "axios";
 import sad from "../img/sad.png";
 import angry from "../img/angry.png";
 import scrap from "../img/scrap.png";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router";
 import Navbar from "./Navbar";
 
+function Englishnews() {
+  const location = useLocation();
 
-function Englishnews () {
-    /*const audiobook_emo = () => {
-        const[item, setItem] = useState(0)
-        const incrementItem = () => setItem(item+1)
-    }*/
+  const [news, setNews] = useState([]);
+  const [emoticon, SetEmoticon] = useState([]);
 
-    let [like, setLike]=useState(0);
-    let [emoName, setEmoName] = useState([
-        "좋아요", "슬퍼요", "화나요"
-    ]);
+  let [like, setLike] = useState(0);
+  //   let [emoName, setEmoName] = useState(["좋아요", "슬퍼요", "화나요"]);
 
-    return (
-        <div className="englishnews">
-            <Navbar />
-            <h1>Englishnews</h1>
-            <div className="englishnews_title">
-                <p>제목</p>
-            </div>
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: `http://3.36.252.208:9000/contents/${location.state.category}/${location.state.id}`,
+    }).then((response) => {
+      if (response.data.isSuccess) {
+        setNews(response.data);
+        // console.log(response.data);
+      } else {
+        console.log("상세 영어 기사 불러오기 실패");
+      }
+    });
+  }, []);
 
-            <div className="englishnews_page">
-                <iframe src="https://www.youtube.com/watch?v=F4k89y-k6qU"></iframe>
-            </div>
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: `http://3.36.252.208:9000/contents/emoticon/${location.state.category}/${location.state.id}`,
+    }).then((response) => {
+      if (response.data.isSuccess) {
+        SetEmoticon(response.data.result);
+        console.log(response.data.result);
+      } else {
+        console.log("이모티콘 불러오기 실패");
+      }
+    });
+  }, []);
 
-            <div className="englishnews_emoscrap">
-            <span className="englishnews_emo">
-                
-            <span className="englishnews_smile"> <img src={smile} alt="smile" width="30" height="30"></img><p>좋아요</p>
-            <span onClick={() => {setLike(like + 1); }}>좋아요</span>{like} </span>
+  const onClick = () => {
+    const current = document.getElementById("scrap-btn");
+    current.style.backgroundColor = "#FFDD2A";
+  };
 
-            <span className="englishnews_sad"> <img src={sad} alt="sad" width="30" height="30"></img><p>슬퍼요</p> 
-            <span onClick={() => {setLike(like + 1); }}>슬퍼요</span>{like} </span>
+  return (
+    <div className="englishnews">
+      <Navbar />
+      <h1>Englishnews</h1>
+      <div className="englishnews_title">
+        <p>{news && news.result?.title}</p>
+      </div>
 
-            <span className="englishnews_angry"> <img src={angry} alt="angry" width="30" height="30"></img><p>화나요</p> 
-            <span onClick={() => {setLike(like + 1); }}>화나요</span>{like} </span>
+      <div className="englishnews_page">
+        <iframe
+          className="news_content"
+          src={news.result?.content}
+          id="englishNews"
+          title="news_content"
+        ></iframe>
+      </div>
 
-            </span>
+      <div className="englishnews_emoscrap">
+        <span className="englishnews_emo">
+          <div className="englishnews_smile">
+            <img src={smile} alt="smile" width="50px" height="50px"></img>
+            <p className="emoticon-num">{emoticon && emoticon.smile}</p>
+          </div>
 
-            <span className="englishnews_scrap">
-                <img src={scrap} alt="scrap" width="30" height="30"></img><p>스크랩</p>
-                <p>스크랩</p>
+          <div className="englishnews_sad">
+            <img src={sad} alt="sad" width="50px" height="50px"></img>
+            <p className="emoticon-num">{emoticon && emoticon.cry}</p>
+          </div>
 
-            </span>
-            </div>
-            
-            <div className="englishnews_chart">
-                <Link to="/english">
-                <button className="chart">목록</button>
-                </Link>
-            </div>
-        </div>
+          <div className="englishnews_angry">
+            <img src={angry} alt="angry" width="60px" height="50px"></img>
+            <p className="emoticon-num">{emoticon && emoticon.angry}</p>
+          </div>
+        </span>
 
-    );
-};
+        <span className="englishnews_scrap">
+          <button className="scrap-btn" id="scrap-btn" onClick={onClick}>
+            <img src={scrap} alt="scrap" width="15%" height="15%"></img>스크랩
+          </button>
+        </span>
+      </div>
+
+      <div className="englishnews_chart">
+        <button
+          className="chart"
+          onClick={() => (window.location.href = "/english")}
+        >
+          목록
+        </button>
+      </div>
+    </div>
+  );
+}
 
 export default Englishnews;
