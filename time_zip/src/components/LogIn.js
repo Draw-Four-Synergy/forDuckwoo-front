@@ -28,7 +28,8 @@ function LogIn() {
         });
         if(response.data.isSuccess){
             const jwt = response.data.result.jwt;
-            navigate("/main", {state: {jwt: jwt}});
+            localStorage.setItem('jwt', jwt);
+            navigate("/main");
         }
         setError(response.data.message);
     };

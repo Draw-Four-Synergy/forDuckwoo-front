@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [id, setId] = useState("");
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     const makeAccount = async () => {
         const response = await axios.post('http://3.36.252.208:9000/users', {
@@ -13,6 +15,11 @@ function SignIn() {
                 "nick": id,
                 "pwd": password
             });
+            if(response.data.isSuccess){
+                const jwt = response.data.result.jwt;
+                localStorage.setItem('jwt', jwt);
+                navigate("/main");
+            }
         setError(response.data.message);
     };
 
