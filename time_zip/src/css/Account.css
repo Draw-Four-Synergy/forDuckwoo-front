@@ -1,5 +1,11 @@
+@font-face {
+    font-family: "PretendardMedium";
+    src: url("../fonts/Pretendard-Medium.ttf");
+}
+
 * {
     box-sizing: border-box;
+    font-family: "PretendardMedium";
 }
 
 form {
