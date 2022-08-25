@@ -8,6 +8,7 @@ import InfoBoard from "./components/InfoBoard";
 import Newsletter from "./components/Newsletter";
 import InfoWrite from "./components/InfoWrite";
 import MyPage from "./components/MyPage";
+import InfoPost from "./components/InfoPost";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/newsletter" element={<Newsletter />}></Route>
           <Route path="/infowrite" element={<InfoWrite />}></Route>
           <Route path="/my_page" element={<MyPage />}></Route>
+          <Route path="/infopost" element={<InfoPost />}></Route>
         </Routes>
       </Router>
     </>
