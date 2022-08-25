@@ -8,6 +8,10 @@ import InfoBoard from "./components/InfoBoard";
 import Newsletter from "./components/Newsletter";
 import InfoWrite from "./components/InfoWrite";
 import MyPage from "./components/MyPage";
+import Englishnews from "./components/Englishnews";
+import English from "./components/English";
+import News from "./components/News";
+import Scrap from "./components/Scrap";
 
 const App = () => {
   return (
@@ -22,6 +26,10 @@ const App = () => {
           <Route path="/newsletter" element={<Newsletter />}></Route>
           <Route path="/infowrite" element={<InfoWrite />}></Route>
           <Route path="/my_page" element={<MyPage />}></Route>
+          <Route path="/english_news" element={<Englishnews />}></Route>
+          <Route path="/news" element={<News/>}></Route>
+          <Route path="/english" element={<English />}></Route>
+          <Route path="/scrap" element={<Scrap />}></Route>
         </Routes>
       </Router>
     </>
@@ -29,3 +37,4 @@ const App = () => {
 };
 
 export default App;
+

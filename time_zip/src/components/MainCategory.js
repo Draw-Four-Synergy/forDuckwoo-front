@@ -16,7 +16,10 @@ const MainCategory = () => {
             <br />
             Letters
           </button>
-          <button id="main-btn2">
+          <button 
+            id="main-btn2"
+            onClick={() => (window.location.href = "/english")}
+          >
             English
             <br />
             Article

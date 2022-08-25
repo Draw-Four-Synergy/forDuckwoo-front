@@ -1,5 +1,5 @@
-.viewscrap{
-    display:flex;
+.viewscrap {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
@@ -11,13 +11,13 @@
     height: 0px;
 }
 
-.nproduct_info{
+.nproduct_info {
     height: 50px;
     width: 100%;
     margin: 15px 0px;
 }
 
-.nproduct{
+.nproduct {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,7 +35,7 @@
     z-index: 1;
 }
 
-.nproduct > button{
+.nproduct>button {
     background-color: rgb(255, 255, 255);
     height: 50px;
     width: 70px;

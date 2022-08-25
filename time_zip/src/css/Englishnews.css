@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+.englishnews {
+    width: 100%;
+    margin: 0px;
+
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+
+    padding: 30px;
+    color: #CE4D4D;
+    font-family: "PretendardMedium";
+    align-items: center;
+}
+
+.englishnews_title {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 30px;
+    border-radius: 20px;
+    border: 1px solid rgb(117, 117, 117);
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.englishnews_page {
+    width: 100%;
+    height: 450px;
+    padding: 10px 20px;
+    margin: 20px 30px;
+    border-radius: 20px;
+    border: 1px solid rgb(117, 117, 117);
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.englishnews_emoscrap {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.englishnews_emo {
+    width: 200px;
+    height: 100px;
+    padding: 10px 20px;
+    margin: 30px;
+    border-radius: 20px;
+    border: 1px solid #CE4D4D;
+    text-align: center;
+    color: black;
+    background-color: rgb(255, 203, 203);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.englishnews_scrap {
+    width: 150px;
+    height: 100px;
+    padding: 10px 20px;
+    margin: 30px 10px;
+    border-radius: 20px;
+    border: 1px solid #CE4D4D;
+    text-align: center;
+    background-color: rgb(255, 203, 203);
+    color: black;
+}
+
+
+.chart>button:hover {
+    background-color: #CE4D4D;
+    color: #FFFFFF;
+}
+
+.chart {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 1px solid #CE4D4D;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
