@@ -40,9 +40,10 @@ function Newsletter() {
       <div className="newsletter">
         <div className="Newsletter_container">
           <Navbar />
-          <h1> English Newsletter </h1>
+          <h1 className="newsletter-title"> English Newsletter </h1>
+          <div className="newsletter-line"></div>
 
-          <h3>Popular</h3>
+          <h3 className="sort_title">Popular</h3>
 
           <div className="Newsletter_row">
             {newsArr.result && (
@@ -53,7 +54,8 @@ function Newsletter() {
             )}
           </div>
 
-          <h3>Recent</h3>
+          <div className="newsletter-line2"></div>
+          <h3 className="sort_title">Recent</h3>
 
           <div className="Newsletter_row">
             {recNewsArr.result && (

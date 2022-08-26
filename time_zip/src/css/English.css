@@ -1,7 +1,14 @@
-.newsletter {
+@font-face {
+    font-family: "PretendardMedium";
+    src: url("../fonts/Pretendard-Medium.ttf");
+}
 
-    display: flex;
+
+
+.newsletter {
+    font-family: "PretendardMedium";
     flex-direction: column;
+    grid: 1;
     justify-content: center;
     align-items: center;
     width: 100%;

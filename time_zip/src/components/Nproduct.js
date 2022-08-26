@@ -9,10 +9,10 @@ function Nproduct({ data, language }) {
   return (
     <>
       <div className="viewscrap">
-        <img src={eye} alt="" width="20" height="20"></img>
-        <p> {data?.view} </p>
-        <img src={scrap} alt="" width="20" height="20"></img>
-        <p> {data?.scrap} </p>
+        <img src={eye} alt="" width="20px" height="20px"></img>
+        <p className="view-count"> {data?.view} </p>
+        <img src={scrap} alt="" width="20px" height="20px"></img>
+        <p className="view-scrap"> {data?.scrap} </p>
       </div>
       <div className="nproduct">
         <div className="nproduct_info">
@@ -20,7 +20,7 @@ function Nproduct({ data, language }) {
         </div>
         {language === "kor" && (
           <>
-            <button>
+            <button className="kor-view-btn">
               <Link
                 to="/news"
                 state={{ category: "news", id: data?.id }}
@@ -33,7 +33,7 @@ function Nproduct({ data, language }) {
         )}
         {language === "eng" && (
           <>
-            <button>
+            <button className="kor-view-btn">
               <Link
                 to="/english_news"
                 state={{ category: "en_news", id: data?.id }}
@@ -44,18 +44,19 @@ function Nproduct({ data, language }) {
             </button>
           </>
         )}
-            {language === "audio" && 
-                <>
-                    <button>
-                        <Link 
-                            to="/audio" 
-                            state={{category:"audio", id:data?.id}} 
-                            style={{textDecoration: 'inherit', color: 'inherit'}}>
-                            View
-                        </Link>
-                    </button>
-                </>
-            }
+        {language === "audio" && (
+          <>
+            <button className="kor-view-btn">
+              <Link
+                to="/audio"
+                state={{ category: "audio", id: data?.id }}
+                style={{ textDecoration: "inherit", color: "inherit" }}
+              >
+                View
+              </Link>
+            </button>
+          </>
+        )}
       </div>
     </>
   );

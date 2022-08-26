@@ -1,5 +1,12 @@
+@font-face {
+    font-family: "PretendardMedium";
+    src: url("../fonts/Pretendard-Medium.ttf");
+}
+
 .newsletter {
+    font-family: "PretendardMedium";
     flex-direction: column;
+    grid: 1;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -16,6 +23,25 @@
     overflow: hidden;
 }
 
+.newsletter-title{
+    margin-left: 2vh;
+    font-size: 5vh;
+    color: #1F1F1F;
+    /* display: flex;
+    justify-content: center; */
+}
+
 .sort_title {
-    margin-bottom: 0px;
+    margin-left: 2vh;
+}
+
+.newsletter-line {
+  width : 100%;
+  border: 1px solid #1F1F1F;
+}
+
+.newsletter-line2{
+    width : 100%;
+    margin-top: 5vh;
+    border: 1px solid #1F1F1F;
 }

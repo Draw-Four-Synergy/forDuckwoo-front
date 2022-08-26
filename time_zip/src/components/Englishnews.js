@@ -21,6 +21,7 @@ function Englishnews() {
     }).then((response) => {
       if (response.data.isSuccess) {
         setNews(response.data);
+        console.log(response.data);
       } else {
         console.log("상세 영어 기사 불러오기 실패");
       }
