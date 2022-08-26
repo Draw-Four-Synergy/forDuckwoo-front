@@ -40,7 +40,8 @@ function Newsletter() {
       <div className="newsletter">
         <div className="Newsletter_container">
           <Navbar />
-          <h1> Newsletter </h1>
+          <h1 className="newsletter-title"> Newsletter </h1>
+          <div className="newsletter-line"></div>
 
           <h3 className="sort_title">인기순</h3>
 
@@ -52,6 +53,7 @@ function Newsletter() {
               </>
             )}
           </div>
+          <div className="newsletter-line2"></div>
 
           <h3 className="sort_title">최신순</h3>
 

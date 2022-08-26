@@ -56,7 +56,13 @@ function News() {
       <div className="englishnews_emoscrap">
         <span className="englishnews_emo">
           <div className="englishnews_smile">
-            <img src={smile} alt="smile" width="50px" height="50px"></img>
+            <img
+              src={smile}
+              alt="smile"
+              width="50px"
+              height="50px"
+              onClick={onClick}
+            ></img>
             <p className="emoticon-num">{news && news.smile}</p>
           </div>
 

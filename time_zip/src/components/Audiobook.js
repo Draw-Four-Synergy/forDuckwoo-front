@@ -40,7 +40,8 @@ function Audiobook() {
       <div className="newsletter">
         <div className="Newsletter_container">
           <Navbar />
-          <h1> Audiobook </h1>
+          <h1 className="newsletter-title"> Audiobook </h1>
+          <div className="newsletter-line"></div>
 
           <h3 className="sort_title">인기순</h3>
 
@@ -53,6 +54,7 @@ function Audiobook() {
             )}
           </div>
 
+          <div className="newsletter-line2"></div>
           <h3 className="sort_title">최신순</h3>
 
           <div className="Newsletter_row">
